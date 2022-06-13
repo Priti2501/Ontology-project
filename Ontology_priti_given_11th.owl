@@ -1,0 +1,1773 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:can="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#can&apos;"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:has_acidity="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_acidity/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnostic_report">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_diagnosis_test_result_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_diagnosis_test_review_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_diagnosis_test_risk_status_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_pathology_test_name_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_Hospital_Name"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_qualification_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_Regn_Value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_gender_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_designation_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_Name_Value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Remarks"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_BP_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_nutrition_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_sleep_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_food_habits_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_temperature_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_weight_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_SPO2_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_gait_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_BMI_rate_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_bowel_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_height_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_posture_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_general_condition_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_pulse_rate_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnosis">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_a"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnostic_report"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Disease">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_related_with"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+        </owl:onClass>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_disease_name_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_other_habit_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_alcoholic_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_smoker_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_surgical_history_details"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Surgical_history"/>
+        </owl:onClass>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_address_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_occupation_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_Id_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_gender_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_remarks"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Remarks"/>
+        </owl:onClass>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_suffered_from"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_personal_habits"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_stetho_value"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_gone_through"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnosis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_age_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_religion_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_visitingDt_time_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_name_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_coordinated_by"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+        </owl:onClass>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Patient_ECG_value"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#have_encountered"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+        </owl:onClass>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_chief_complaints_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_advised_by"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_locationId_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_general_survey_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_status_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_given_a"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+        </owl:onClass>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_family_history_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Communication_Medium">
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#communication_medium_name"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Remarks"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Disease"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_doc_id"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_prescribed_medicine"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+        </owl:onClass>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_prescribed_medication_dosage_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_symptom_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass>
+          <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+        </owl:onClass>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_provisional_diagnosis_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_given_based_on"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_p_id_data"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_examination_observation_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_given_by"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_referral_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_lifestyle_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_present_illness_history"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_dietary_advice_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_final_diagnosis"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnosis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_recommended_tests_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Health_assistant_designation_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Health_assistant_qualification_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Health_assistant_name_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_communication_medium"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Communication_Medium"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Health_assistant_id_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine">
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_medicine_price_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_medicine_name_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_medicine_composition_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_medicine_companyName_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom_area_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom_duration_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom_other_characteristic_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom_type_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_pa_id_data"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Hospital">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Organization"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_hospital_address_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_hospital_contactInfo_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_hospital_name_value"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_hospital_Id_value"/>
+        </owl:onProperty>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Surgical_history">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_surgery_remark_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_surgical_area_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Remarks">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_remarks_data"/>
+        </owl:onProperty>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:minQualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#User"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_general_survey_data">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_given_a">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_communication_medium">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Communication_Medium"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_prescribed_medicine">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_remarks">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Remarks"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_surgical_history_details">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Surgical_history"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_suffered_from">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Disease"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_given_based_on">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Observation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_symptom_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_advised_by">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_coordinated_by">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#have_encountered">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_related_with">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Disease"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_a">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnosis"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnostic_report"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_given_by">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_gone_through">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnosis"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_personal_habits">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_final_diagnosis">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnosis"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_pa_id_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_medicine_composition_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_food_habits_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_gait_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_recommended_tests_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_gender_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_Regn_Value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_remarks_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Remarks"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_sleep_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_medicine_price_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_address_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_surgical_area_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Surgical_history"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_height_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_weight_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_prescribed_medication_dosage_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_general_condition_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Patient_ECG_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_hospital_Id_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Hospital"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_visitingDt_time_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_hospital_contactInfo_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Hospital"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Health_assistant_name_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_hospital_name_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Hospital"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_designation_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_pathology_test_name_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnostic_report"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_smoker_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Health_assistant_designation_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_examination_observation_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_gender_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_name_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_surgery_remark_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Surgical_history"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_doc_id">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_age_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_medicine_companyName_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_chief_complaints_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#communication_medium_name">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Communication_Medium"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_family_history_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_bowel_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_diagnosis_test_result_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnostic_report"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_Name_Value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#is_alcoholic_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_hospital_address_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Hospital"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_pulse_rate_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_stetho_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_provisional_diagnosis_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_nutrition_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_other_habit_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_Id_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom_type_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_religion_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_present_illness_history">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_diagnosis_test_review_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnostic_report"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_lifestyle_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom_area_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_temperature_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_locationId_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_BP_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom_duration_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_status_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_SPO2_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_diabetes_data">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_disease_name_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Disease"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_dietary_advice_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_qualification_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_posture_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_diagnosis_test_risk_status_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnostic_report"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom_other_characteristic_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_medicine_name_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Health_assistant_qualification_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_BMI_rate_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#General_survey"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_occupation_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_p_id_data">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_patient_referral_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Doctor_Hospital_Name">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#has_Health_assistant_id_value">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#hospital1">
+    <has_hospital_Id_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</has_hospital_Id_value>
+    <has_hospital_address_value>kolkata</has_hospital_address_value>
+    <has_hospital_contactInfo_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >9872345678</has_hospital_contactInfo_value>
+    <has_hospital_name_value>Medicare Hospital</has_hospital_name_value>
+    <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Hospital"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient3">
+    <have_encountered>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom3">
+        <has_pa_id_data rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >20945</has_pa_id_data>
+        <symptom_type_data>period problem</symptom_type_data>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+      </owl:NamedIndividual>
+    </have_encountered>
+    <has_patient_Id_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >20945</has_patient_Id_value>
+    <has_patient_gender_value>female</has_patient_gender_value>
+    <has_patient_name_value>Satabdi Guha</has_patient_name_value>
+    <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#hospital2">
+    <has_hospital_Id_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >2</has_hospital_Id_value>
+    <has_hospital_address_value>howrah</has_hospital_address_value>
+    <has_hospital_contactInfo_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >7890546789</has_hospital_contactInfo_value>
+    <has_hospital_name_value>Medico Hospital</has_hospital_name_value>
+    <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Hospital"/>
+  </owl:NamedIndividual>
+  <Patient rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient2">
+    <has_patient_locationId_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >10000001</has_patient_locationId_value>
+    <has_patient_stetho_value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</has_patient_stetho_value>
+    <has_patient_visitingDt_time_value rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2015-01-20T12:15:17Z</has_patient_visitingDt_time_value>
+    <has_patient_address_value>Kaithy</has_patient_address_value>
+    <is_suffered_from>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#disease2">
+        <is_related_with>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom2">
+            <has_pa_id_data rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >10299</has_pa_id_data>
+            <symptom_area_data>Right shoulder, Back</symptom_area_data>
+            <symptom_duration_data>17 years</symptom_duration_data>
+            <symptom_other_characteristic_data>Shoulder pain radiating to right wrist, back pain since 10 yrs.</symptom_other_characteristic_data>
+            <symptom_type_data>always brought on by injury</symptom_type_data>
+            <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+          </owl:NamedIndividual>
+        </is_related_with>
+        <has_disease_name_value>Arthritis</has_disease_name_value>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Disease"/>
+      </owl:NamedIndividual>
+    </is_suffered_from>
+    <has_patient_occupation_value>Day Labour</has_patient_occupation_value>
+    <is_advised_by>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor2">
+        <has_Doctor_Hospital_Name>Medico Hospital</has_Doctor_Hospital_Name>
+        <has_Doctor_Name_Value>Dr.Satadal Saha</has_Doctor_Name_Value>
+        <has_Doctor_Regn_Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >43646</has_Doctor_Regn_Value>
+        <has_Doctor_designation_value>Consultant Surgeon</has_Doctor_designation_value>
+        <has_Doctor_gender_value>Male</has_Doctor_gender_value>
+        <has_Doctor_qualification_value>MS,FRCS(Eng.)</has_Doctor_qualification_value>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+      </owl:NamedIndividual>
+    </is_advised_by>
+    <has_patient_gender_value>Male</has_patient_gender_value>
+    <has_patient_religion_value>Muslim</has_patient_religion_value>
+    <have_encountered rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom2"/>
+    <has_Patient_ECG_value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >false</has_Patient_ECG_value>
+    <is_given_a>
+      <Prescription rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription2">
+        <has_examination_observation_data>Restricted movement on right shoulder. Restricted forward bending from spine.</has_examination_observation_data>
+        <has_prescribed_medicine>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#medicine2">
+            <has_medicine_companyName_value>GlaxoSmithKline Asia Private Limited</has_medicine_companyName_value>
+            <has_medicine_composition_value>Paracetamol 650mg,caffeine 50mg</has_medicine_composition_value>
+            <has_medicine_name_value>Crocin 650</has_medicine_name_value>
+            <has_medicine_price_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+            >25.34</has_medicine_price_value>
+            <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+          </owl:NamedIndividual>
+        </has_prescribed_medicine>
+        <has_prescribed_medication_dosage_data>Crocin 650, 1 tab twice daily for three days.</has_prescribed_medication_dosage_data>
+        <has_symptom_data rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom2"/>
+        <has_patient_referral_value>To physiotherapist</has_patient_referral_value>
+        <has_p_id_data rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >10299</has_p_id_data>
+        <is_given_by rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor2"/>
+        <has_present_illness_history>Past accident. Fell from tree 17yrs ago</has_present_illness_history>
+        <has_provisional_diagnosis_data>Right frozen shoulder</has_provisional_diagnosis_data>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <has_doc_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >43646</has_doc_id>
+      </Prescription>
+    </is_given_a>
+    <has_patient_status_value>New</has_patient_status_value>
+    <has_personal_habits>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#personal_habit2">
+        <is_alcoholic_data rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</is_alcoholic_data>
+        <is_smoker_data rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</is_smoker_data>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+      </owl:NamedIndividual>
+    </has_personal_habits>
+    <has_patient_age_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >45</has_patient_age_value>
+    <has_chief_complaints_data>Shoulder pain radiating to right wrist. Back pain since 10yrs.</has_chief_complaints_data>
+    <has_patient_Id_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >10299</has_patient_Id_value>
+    <has_general_survey_data>
+      <General_survey rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#general_survey2">
+        <has_BP_value>108/69</has_BP_value>
+        <has_temperature_value>97.6F</has_temperature_value>
+        <has_nutrition_data>Poor</has_nutrition_data>
+        <has_bowel_value>Regular</has_bowel_value>
+        <has_gait_data>Normal</has_gait_data>
+        <has_sleep_data>Good</has_sleep_data>
+        <has_height_value>157cm</has_height_value>
+        <has_SPO2_data>93</has_SPO2_data>
+        <has_BMI_rate_value>23</has_BMI_rate_value>
+        <has_general_condition_data>Poor</has_general_condition_data>
+        <has_food_habits_data>Non Vegetarian</has_food_habits_data>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <has_posture_data>Normal</has_posture_data>
+        <has_weight_value>42.9</has_weight_value>
+      </General_survey>
+    </has_general_survey_data>
+    <is_coordinated_by>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant2">
+        <has_communication_medium>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#com2">
+            <communication_medium_name>Internet</communication_medium_name>
+            <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Communication_Medium"/>
+          </owl:NamedIndividual>
+        </has_communication_medium>
+        <has_Health_assistant_designation_value>Health Assistant</has_Health_assistant_designation_value>
+        <has_Health_assistant_id_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >4</has_Health_assistant_id_value>
+        <has_Health_assistant_name_value>Amar Mondal</has_Health_assistant_name_value>
+        <has_Health_assistant_name_value>H.S</has_Health_assistant_name_value>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+      </owl:NamedIndividual>
+    </is_coordinated_by>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <has_patient_name_value>Sk Fatik</has_patient_name_value>
+  </Patient>
+  <Patient rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Patient1">
+    <is_advised_by>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor1">
+        <has_Doctor_Hospital_Name>Medicare Hospital</has_Doctor_Hospital_Name>
+        <has_Doctor_Name_Value>Dr.S.B.Acharya</has_Doctor_Name_Value>
+        <has_Doctor_Regn_Value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >42760</has_Doctor_Regn_Value>
+        <has_Doctor_designation_value>General Physician</has_Doctor_designation_value>
+        <has_Doctor_gender_value>Male</has_Doctor_gender_value>
+        <has_Doctor_qualification_value>MBBS</has_Doctor_qualification_value>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+      </owl:NamedIndividual>
+    </is_advised_by>
+    <has_chief_complaints_data>dyspnoea, pain in the neck, discomfort increases after food</has_chief_complaints_data>
+    <has_patient_visitingDt_time_value rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2014-09-05T12:39:50Z</has_patient_visitingDt_time_value>
+    <have_encountered>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom1">
+        <has_pa_id_data rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >10065</has_pa_id_data>
+        <symptom_area_data>Lungs</symptom_area_data>
+        <symptom_other_characteristic_data>breathing discomfort condition</symptom_other_characteristic_data>
+        <symptom_type_data>Difficulty in breathing</symptom_type_data>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Symptom"/>
+      </owl:NamedIndividual>
+    </have_encountered>
+    <is_given_a>
+      <Prescription rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Prescription1">
+        <has_doc_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >42760</has_doc_id>
+        <has_symptom_data rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom1"/>
+        <has_prescribed_medicine>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#medicine1">
+            <has_medicine_companyName_value>Lupin Laboratories</has_medicine_companyName_value>
+            <has_medicine_composition_value>20 micrograms ipratropium bromide</has_medicine_composition_value>
+            <has_medicine_name_value>Atrovent*-40 MDI</has_medicine_name_value>
+            <has_medicine_price_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >2520</has_medicine_price_value>
+            <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Medicine"/>
+          </owl:NamedIndividual>
+        </has_prescribed_medicine>
+        <has_final_diagnosis>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#diagnosis1">
+            <has_a>
+              <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#diagnostic_report1">
+                <has_diagnosis_test_result_value>Vert: 10mm/mV
+Hori: 25mm/sec</has_diagnosis_test_result_value>
+                <has_pathology_test_name_value>ECG</has_pathology_test_name_value>
+                <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnostic_report"/>
+              </owl:NamedIndividual>
+            </has_a>
+            <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Diagnosis"/>
+          </owl:NamedIndividual>
+        </has_final_diagnosis>
+        <has_prescribed_medication_dosage_data>Inhale daily twice</has_prescribed_medication_dosage_data>
+        <has_provisional_diagnosis_data>ECG</has_provisional_diagnosis_data>
+        <has_p_id_data rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >10065</has_p_id_data>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <is_given_by rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor1"/>
+      </Prescription>
+    </is_given_a>
+    <is_coordinated_by>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant1">
+        <has_communication_medium>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#com1">
+            <communication_medium_name>wifi</communication_medium_name>
+            <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Communication_Medium"/>
+          </owl:NamedIndividual>
+        </has_communication_medium>
+        <has_Health_assistant_designation_value>Health Assistant</has_Health_assistant_designation_value>
+        <has_Health_assistant_id_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >5</has_Health_assistant_id_value>
+        <has_Health_assistant_name_value>Tanushree Sarkar</has_Health_assistant_name_value>
+        <has_Health_assistant_qualification_value>B.A(Hons)</has_Health_assistant_qualification_value>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Health_assistant"/>
+      </owl:NamedIndividual>
+    </is_coordinated_by>
+    <is_suffered_from>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#disease1">
+        <is_related_with rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#symptom1"/>
+        <has_disease_name_value>Asthma</has_disease_name_value>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Disease"/>
+      </owl:NamedIndividual>
+    </is_suffered_from>
+    <has_general_survey_data>
+      <General_survey rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#general_survey1">
+        <has_pulse_rate_data>"104"</has_pulse_rate_data>
+        <has_general_condition_data>Moderate</has_general_condition_data>
+        <has_food_habits_data>Vegetarian</has_food_habits_data>
+        <has_BP_value>142/101</has_BP_value>
+        <has_gait_data>Normal</has_gait_data>
+        <has_height_value>173cm</has_height_value>
+        <has_temperature_value>"98.4F"</has_temperature_value>
+        <has_SPO2_data>"92"</has_SPO2_data>
+        <has_weight_value>"66"</has_weight_value>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <has_bowel_value>Regular</has_bowel_value>
+        <has_nutrition_data>Moderate</has_nutrition_data>
+        <has_posture_data>Normal</has_posture_data>
+        <has_BMI_rate_value>"22.5"</has_BMI_rate_value>
+        <has_sleep_data>Good</has_sleep_data>
+      </General_survey>
+    </has_general_survey_data>
+    <has_family_history_data>asthma of daughter and father</has_family_history_data>
+    <has_patient_religion_value>Hinduism</has_patient_religion_value>
+    <has_patient_gender_value>Male</has_patient_gender_value>
+    <has_patient_address_value>Barhra</has_patient_address_value>
+    <is_gone_through rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#diagnosis1"/>
+    <has_Patient_ECG_value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</has_Patient_ECG_value>
+    <has_patient_occupation_value>Business</has_patient_occupation_value>
+    <has_patient_Id_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >10065</has_patient_Id_value>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <has_patient_stetho_value rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</has_patient_stetho_value>
+    <has_patient_status_value>Revisit</has_patient_status_value>
+    <has_patient_age_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >57</has_patient_age_value>
+    <has_patient_name_value>Anil Mondal</has_patient_name_value>
+    <has_personal_habits>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#personal_habit1">
+        <is_alcoholic_data rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</is_alcoholic_data>
+        <is_smoker_data rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >false</is_smoker_data>
+        <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Personal_habits"/>
+      </owl:NamedIndividual>
+    </has_personal_habits>
+    <has_patient_locationId_value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >10000001</has_patient_locationId_value>
+  </Patient>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor6">
+    <has_Doctor_Name_Value>Priti</has_Doctor_Name_Value>
+    <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#medical_history2">
+    <has_diabetes_data>No</has_diabetes_data>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor3">
+    <rdf:type rdf:resource="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#Doctor"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#medical_history1">
+    <has_diabetes_data>No</has_diabetes_data>
+  </owl:NamedIndividual>
+</rdf:RDF>

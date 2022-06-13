@@ -1,0 +1,18 @@
+@prefix pre: <http://www.semanticweb.org/rudrani/ontologies/2022/3/ontology_revised#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+[rule1:(?a rdf:type pre:Prescription),(?b rdf:type pre:Patient),(?a pre:has_p_id_data ?d),(?b pre:has_patient_Id_value ?e),isLiteral(?d),isLiteral(?e), equal(?d,?e) -> print('Valid patientId in prescription', ?e)]
+
+[rule3:(?a rdf:type pre:Symptom),(?a pre:symptom_type_data ?b),(?a pre:has_pa_id_data ?c),isLiteral(?b), equal(?b,'period problem'),isLiteral(?c),(?d rdf:type pre:Patient),(?d pre:has_patient_Id_value ?e),isLiteral(?e), equal(?c,?e),(?d pre:has_patient_gender_value ?f),isLiteral(?f), equal(?f,'female') -> print('proper data have entered', ?e)]
+
+[rule4:(?a rdf:type pre:Symptom),(?a pre:symptom_type_data ?b),(?a pre:has_pa_id_data ?c),isLiteral(?b), equal(?b,'pregnancy related problem'),isLiteral(?c),(?d rdf:type pre:Patient),(?d pre:has_patient_Id_value ?e),isLiteral(?e), equal(?c,?e),(?d pre:has_patient_gender_value ?f),isLiteral(?f), equal(?f,'female') -> print('proper data have entered', ?e)]
+
+[rule5:(?a rdf:type pre:Prescription),(?b rdf:type pre:Doctor),(?a pre:has_doc_id_data ?d),(?b pre:has_Doctor_Regn_Value ?e),isLiteral(?d),isLiteral(?e), equal(?d,?e) -> print('Valid doctor Id in prescription', ?e)]
+
+
+
+
+
+ 
